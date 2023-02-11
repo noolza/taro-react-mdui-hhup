@@ -8,6 +8,10 @@
     "typescript": false,
     "css": "less"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noolza/taro-react-mdui-hhup.git"
+  },
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
