@@ -1,0 +1,24 @@
+//@import "~taro-ui/dist/style/components/flex.scss";
+//@import "~taro-ui/dist/style/components/image-picker.scss";
+//@import "~taro-ui/dist/style/components/modal.scss";
+.button-normal{
+  width:100px;
+  height:50px;
+  //padding:0px;
+  line-height: 50px;
+  font-size: 23px;
+  margin: 5px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.image-url-input{
+  border: 1px #aaaaaa solid;
+  line-height: 50px;
+  height: 60px;
+  margin:10px;
+ }
+.image-picker-panel{
+  z-index: 2000;
+}

@@ -1,0 +1,25 @@
+/**
+ * Created by lhq on 2020/8/18 0018.
+ */
+const Err = {
+  AUTH:10000,
+  SECURITY:10001,
+  POST_ADD:10020,
+  POST_UPDATE:10021,
+  POST_REMOVE:10022,
+  POST_LIKE:10023,
+  COMMENT_ADD:10030,
+  COMMENT_UPDATE:10031,
+  COMMENT_SECTXT:10032,
+  COMMENT_SECIMG:10033,
+  HOME_ADD:10040,
+  HOME_UPDATE:10041
+}
+const ErrInfo={
+  AUTH:'未授权',
+}
+
+module.exports={
+  ERR:Err,
+  ERR_INFO:ErrInfo
+}

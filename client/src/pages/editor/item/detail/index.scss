@@ -1,0 +1,124 @@
+@import '~taro-parse/dist/style/main.scss';
+@import '../../editor.scss';
+@import "@style/edit_icons.wxss";
+
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  position: relative;
+  width:100%;
+  min-height: 100px;
+  &__flex-item {
+    position: relative;
+    //margin-left: 10px;
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__choose-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    box-sizing: border-box;
+    //@include border-thin();
+
+    .add-bar {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      width: 30%;
+      height: 2PX;
+      border-radius: 1PX;
+      background: #333333;
+
+      &:nth-child(1) {
+        transform: translate3d(-50%, -50%, 0) rotate(90deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate3d(-50%, -50%, 0) rotate(0);
+      }
+    }
+  }
+
+  &__wrap{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+    &-item {
+      display: flex;
+      width:100%;
+
+      &-img {
+        width: 100%;
+        height: auto;
+      }
+
+      &-float-tr {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        right:20px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.item-detail-title {
+  padding: 28px;
+  background: white;
+  //@include border(bottom, 2px, solid, white);
+  color: $text-color;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-detail-step{
+  margin: 0px 0px 50px;
+  background: white;
+  flex-direction: column;
+  display: flex;
+  box-shadow: 0px 2px 5px rgba(0,0,0,.1);
+
+  &-img {
+    width: 100%;
+    //border-top-left-radius: 20px;
+    //border-top-right-radius: 20px;
+  }
+  &-desc{
+    width: 100%;
+    display: inline-block;
+    padding: 12px;
+    font-size: 32px;
+    color: #2b322d;
+    max-height:50px;
+  }
+  &-note{
+    //display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height:50px;
+    font-size: 30px;
+    word-break: break-word;
+    width:100%;
+    background: #e6e6e6;
+    color: #6495ed;
+    //@include text-ellipsis;
+  }
+}

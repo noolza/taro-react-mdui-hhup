@@ -1,0 +1,39 @@
+//@import "@styles/mixin";
+@import "@style/edit_icons.wxss";
+//@import "~taro-ui/dist/style/components/index.scss";
+@import "@style/edit_icons.wxss";
+@import "@style/icons.wxss";
+.editor-page {
+  //@include wh(100%, 100%);
+  position: relative;
+
+  &_banner{
+    position: relative;
+    height: 100%;
+    //width:100%;
+    overflow: hidden;
+    z-index: 0;
+    &_item {
+      position: absolute;
+      top:0;
+      left:0;
+      opacity: 0;
+      transform: scale(1);
+      object-fit: cover;
+      height:100%;
+      //transition: opacity 200ms ease-in;
+      &--show{
+        z-index: 1;
+        animation: show 5s linear;
+      }
+      &--hide{
+        z-index: 2;
+        animation: hide 500ms linear;
+      }
+      &--normal{
+        opacity:1;
+        height: 100%;
+      }
+    }
+  }
+}

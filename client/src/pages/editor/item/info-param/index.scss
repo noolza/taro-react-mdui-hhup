@@ -1,0 +1,55 @@
+
+@import "../../editor.scss";
+@import "@style/edit_icons.wxss";
+
+.item-info-param {
+  margin-top: 20px;
+  padding: 10px 0px;
+  background: $white;
+}
+
+.item-info-param__title {
+  //@include border(bottom, 2px, solid, white);
+  margin:10px 0;
+  &-txt {
+    color: $text-color;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 28px;
+    padding: 28px;
+  }
+}
+
+.item-info-param__item {
+  display: flex;
+  flex-direction: row;
+  padding: 28px;
+  margin: 0 15px;
+  @include border(bottom, 1px, dashed, white);
+  //@include eject(border-top-width, 1PX);
+
+  &-name {
+    padding-left: 10px;
+    width: 40%;
+    color: $text-color;
+    font-size: 24px;
+    height: 30px;
+    @include border(right, 1px, dashed, white);
+  }
+  &-name-group{
+    border:none;
+    font-size: 26px;
+    font-weight: bold;
+    padding-left: 0px;
+  }
+
+  &-value {
+    //flex: 1;
+    width:60%;
+    margin-left: 15px;
+    color: $text-color;
+    font-size: 24px;
+    height: 30px;
+  }
+}
+

@@ -1,0 +1,16 @@
+@import "../../../style/mixin";
+
+.tuan-view {
+  &-price,
+  &-sale{
+    float: left !important;
+    margin-right: auto !important;
+    font-size: 20PX;
+    //height: 18PX;
+    //line-height: 18PX;
+  }
+  &-price{
+    padding-top: 4PX;
+    font-size: inherit;
+  }
+}

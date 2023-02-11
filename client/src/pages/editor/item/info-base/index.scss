@@ -1,0 +1,151 @@
+
+//@import "~taro-ui/dist/style/components/icon.scss";
+@import "../../editor.scss";
+.item-info-base {
+  //position: absolute;
+  //right: 0;
+  //bottom: 0;
+  //left: 0;
+  //margin-top: -270px;
+  //height:200px;
+  color: #000;
+  background: #fff;
+  //transform: rotate(0);
+}
+
+.item-info-base__header {
+  position: relative;
+  padding: 24px 16px 16px 16px;
+  //color: white;
+  //display: flex;
+  //flex-direction: row;
+  //align-items: center;
+
+  &-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-name {
+    display: block;
+    font-size: 36px;
+    line-height: 50px;
+    opacity: .87;
+    //color: $black;
+  }
+
+  &-desc {
+    display: block;
+    font-size: 28px;
+    line-height: 32px;
+    opacity: .54;
+  }
+
+  &-star {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 22px;
+
+    &-txt {
+      color: $primary-color;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 32px;
+    }
+
+    &-link {
+      margin-top: 12px;
+      color: white;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.item-info-base__price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+
+  &-symbol {
+    padding-top: 8px;
+    color: $primary-color;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &-txt {
+    color: $primary-color;
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  &-origin {
+    margin-left: 18px;
+    padding-top: 10px;
+    color: white;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.item-info-base__tag {
+  display: flex;
+  flex-direction: row;
+  margin-top: 28px;
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 12px;
+    padding: 0 2px;
+    height: 47px;
+    max-width: 150px;
+    min-width: 80px;
+    border: 1px solid #f28e2d;
+
+    //@include hairline(border-width);
+    //border-radius: 6px;
+
+    //@include eject(border-width, 1PX);
+
+    &-txt {
+      color: #f28e2d;
+      font-size: 24px;
+      height: 36px;
+      max-width: 120px;
+      background: #ddd;
+      margin: 0px;
+    }
+
+    &-img {
+      margin-left: 8px;
+      width: 13px;
+      height: 24px;
+    }
+  }
+}
+.item-info-base__prov {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 28px;
+  align-items: center;
+  border-top: #d2d2d2 1px solid;
+
+  &-title{
+    font-size: 28px;
+    width: 150px;
+  }
+  &-value{
+    font-size: 28px;
+    flex:1;
+  }
+  &-icon{
+
+  }
+}

@@ -1,0 +1,68 @@
+//@import "../../style/mdui";
+
+.container{
+  background: #d4e8c4;
+  height:100%;
+  swiper {
+    swiper-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height:90%;
+      padding-bottom:56px;
+      .item {
+        text-align: center;
+        padding-bottom: 40px;
+        //height:560px;
+        image {
+          width: 512px;
+          //height: auto;
+        }
+        .title {
+          font-size: 36px;
+          font-weight: bold;
+          margin: 30px 0px;
+        }
+        .des {
+          font-size: 28px;
+          color: #969696;
+          margin-bottom: 60px;
+        }
+        .login_button{
+          background: #5CD35E;
+          background-color: #5CD35E;
+          color: white;
+          &:after{
+            background: transparent;
+            background-color: transparent;
+
+          }
+        }
+      }
+    }
+  }
+  .bannerDots{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -256px;
+    left: 0;
+    height: 20px;
+    //z-index: 12;
+    transform: rotate(0);
+  }
+
+  .dot{
+    width: 14px;
+    height: 14px;
+    margin: 7px;
+    border-radius:14px;
+    background: #bbb;
+  }
+  .dot.active{
+    width: 25px;
+    background: #5CD35E;
+  }
+}
+
+

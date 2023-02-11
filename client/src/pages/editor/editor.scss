@@ -1,0 +1,221 @@
+
+//@import "~taro-ui/dist/style/components/index.scss";
+@import "@style/edit_icons.wxss";
+@import "@style/icons.wxss";
+//@import "~taro-ui/dist/style/components/icon.scss";
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item__wrap {
+  padding-bottom: 100px;
+  background: #fafafa;
+}
+
+.item__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+}
+.mini-btn,
+.big-add-btn,
+.remove-btn,
+.del-btn,
+.add-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0PX;
+  right: 0PX;
+  z-index: 2;
+  width: 20PX;
+  height: 20PX;
+  font-size: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  background-color: #9e9e9e;
+  opacity: 0.8;
+  box-sizing: border-box;
+  margin: 5px;
+  float:right;
+}
+
+.big-add-btn::before,
+.add-btn::before,
+.big-add-btn::after,
+.add-btn::after,
+.del-btn::before,
+.del-btn::after,
+.remove-btn::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 10PX;
+  height: 1PX;
+  border-radius: 1PX;
+  background: #000000;
+}
+
+.del-btn::before{
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+.del-btn::after{
+  transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+
+.add-btn::before{
+  transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+.add-btn::after{
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+}
+
+.remove-btn::before{
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+}
+
+.big-add-btn{
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+  background: #fff;
+  border: #5CD35E 5px solid;
+  flex:1;
+}
+.big-add-btn::before{
+  transform: translate3d(-50%, -50%, 0) rotate(90deg);
+  width:50%;
+  height:5px;
+}
+.big-add-btn::after{
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  width:50%;
+  height:5px;
+}
+
+.float-tr {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  right:20px;
+  z-index: 2;
+}
+
+.float-icon-left-wrap,
+.float-icon-wrap{
+  width:100%;
+  text-align:right;
+  margin-bottom:-50px;
+  z-index:10;
+  flex-direction: row;
+}
+
+.float-icon-left-wrap{
+  text-align:left;
+}
+
+.edit-banner__swiper {
+  // NOTE RN 的 Swiper 需要有高度，否则会报错
+  height: 420px;
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+      border:10px #fff solid;
+      overflow: hidden;
+    }
+  }
+}
+.editor-banner-float-tr{
+  position: absolute;
+  top:10px;
+  right: 10px;
+  z-index: 100;
+}
+.editor-banner-float-tl{
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  position: absolute;
+  top:10px;
+  left: 10px;
+  font-size: 32px;
+}
+.editor-banner-float-br{
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+  //z-index: 10;
+}
+
+
+.poly, .triangle,.ellipse, .circle, .light, .sixpoly, .poly-heart, .zhihe,.fivepoly,.sixpoly,.eightpoly,.msgbox,.poly2,.arrow-left,.arrow-right
+.ellipse,.shape{
+  width:100px;
+  height: 100px;
+  background: rgba(163, 163, 163, 0.75);
+  margin: 10px;
+}
+.image{
+  width:auto;
+  height: 100px;
+  margin: 10px;
+}
+
+.poly{
+  -webkit-clip-path: polygon(100% 0,100% 100%, 0 100%, 0 0);
+}
+.triangle{
+  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+.circle{
+  -webkit-clip-path: circle(50% at 50% 50%);
+}
+.ellipse{
+  -webkit-clip-path: ellipse(30% 20% at 50% 50%);
+}
+.poly-heart {
+  -webkit-clip-path: polygon(25% 0, 50% 20%, 75% 0, 100% 20%, 100% 60%, 50% 95%, 0 60%, 0 20%);
+}
+.zhihe{
+  -webkit-clip-path: polygon(22% 0, 35% 15%, 35% 40%, 30% 50%, 100% 50%, 65% 85%, 80% 100%, 30% 100%, 10% 80%, 10% 50%, 22% 30%, 22% 20%, 0 20%);
+}
+.light{
+  -webkit-clip-path: polygon(43% 0, 62% 0, 52% 26%, 69% 20%, 32% 100%, 42% 40%, 26% 46%);
+}
+.fivepoly{
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.sixpoly{
+  -webkit-clip-path: polygon(10% 20%, 50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%);
+}
+.eightpoly{
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.msgbox{
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+.poly2{
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.arrow-left{
+  -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+.arrow-right{
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+

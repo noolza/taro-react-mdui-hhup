@@ -1,0 +1,22 @@
+@import "../../style/mixin";
+
+.editor-view {
+  position: relative;
+  display: block;
+  &-input {
+    position: absolute;
+    width: 100%;
+    min-height: 20PX;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    transform: rotate(0);
+    //border: 1px lightseagreen solid;
+    &-focus{
+      border: 1px lightseagreen solid;
+      //background: white;
+      //opacity:1;
+    }
+  }
+}

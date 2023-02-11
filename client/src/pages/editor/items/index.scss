@@ -1,0 +1,226 @@
+
+//@import "~taro-ui/dist/style/components/flex.scss";
+@import "@style/edit_icons.wxss";
+@import "@style/icons.wxss";
+@import "@style/mixin.scss";
+
+.home-popular {
+  margin-top: 40px;
+  background: #fbfbfb;
+  &-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    height:100px;
+  }
+  &-comment {
+    //margin-top: 10px;
+    padding: 0 10px;
+    //border-radius: 35px;
+    //background: #f3f3f3;
+    &-head{
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
+    &-face {
+      width: 42px;
+      height: 42px;
+      padding: 0px 4px;
+    }
+
+    &-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+      border: 0.5px solid gray;
+    }
+
+    &-txt {
+      //flex: 1;
+      display: flex;
+      margin-left: 10px;
+      color: white;
+      font-size: 24px;
+      text-align: left;
+      align-items: center;
+      flex-wrap: wrap;line-height: 44px;
+      //@include lamp-clamp(2);
+    }
+
+    &-view{
+      font-size: 24px;
+      padding: 10px;
+      display: flex;
+      margin-left: 50px;
+      color: black;
+    }
+  }
+}
+
+.home-popular__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  &-txt {
+    color: black;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+}
+
+.home-popular__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //padding: 0 15px;
+  text-align: center;
+
+  &-item__1,
+  &-item__2 {
+    display: flex;
+    flex-direction: column;
+    //padding: 0 0px 30px;
+    width: calc((100% - 6.5px*4)/2);
+    //max-width: 330px;
+    border-radius: 6px;
+    background: #fff;
+    margin: 0px 6.5px;
+    min-height: 300px;
+    &-menu{
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right:10px;
+      //margin-top:-30px;
+      .menu-icon{
+        margin: 5px;
+        font-size: 48px;
+      }
+      .menu-text{
+        font-size: 25px;
+        color:gray;
+        margin: 5px 10px 0px 0px;
+      }
+    }
+    &-desc {
+      padding: 0 12px;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      color: #ffffff;
+      font-size: 24px;
+      background-color: rgba(152, 192, 126, 0.69);
+      @include text-ellipsis;
+      z-index: 1;
+    }
+
+    &-img {
+      width: 100%;
+      //height: auto;
+      background: #f4f4f4;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      //margin-bottom:-70px;
+      &--show{
+        z-index: 1;
+        //animation: show 5s linear;
+        transform: scale(1.1,1.1);
+        transition: all 6s linear;
+      }
+      &--hide{
+        z-index: 2;
+        transform: scale(1);
+        //animation: hide 500ms linear;
+      }
+      &--normal{
+        opacity:1;
+        height: 100%;
+      }
+    }
+
+    &-info {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-size: 30px;
+      //line-height: 46px;
+      text-align: left;
+      color: #2b322d;
+      padding-bottom: 20px;
+      @include text-ellipsis;
+    }
+
+    &-price-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-price {
+      color: black;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    &-price--origin {
+      margin-left: 14px;
+      color: white;
+      font-size: 24px;
+      font-weight: 200;
+      line-height: 40px;
+      text-decoration: line-through;
+      text-decoration-color: white;
+    }
+    &-float-tr {
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      right:20px;
+      z-index: 2;
+    }
+  }
+  &-item__1{
+    width: 100%;
+    margin: 0px;
+    padding-bottom: 10px;
+    //height:700px;
+    border-radius: 0px;
+    &-img {
+      border-radius: 0px;
+    }
+    border-bottom: #aaaaaa 1px solid;
+
+  }
+}
+
+//pc
+@media (min-width: 1024px){
+  .home-popular__list-item{
+    width: calc((100% - 6.5px*8)/4);
+    border: 1px #5CD35E solid;
+    //max-width: 330px;
+  }
+  .home-popular__list-item :active{
+    border: 1px #5CD35E solid;
+  }
+  .home-popular__list{
+    width: fit-content; margin-left: auto; margin-right: auto;
+  }
+  .home-popular{
+    width:1280px;
+    margin-left: auto; margin-right: auto;
+  }
+}

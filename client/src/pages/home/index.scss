@@ -1,0 +1,14 @@
+@import "../../style/mixin";
+@import "../../style/mdui";
+@import "../../style/fonts";
+
+.home-page {
+  transition: background 200ms linear;
+  will-change: background;
+}
+
+.home-tab{
+  background: white;
+  border-top-left-radius: 20PX;
+  border-top-right-radius: 20PX;
+}

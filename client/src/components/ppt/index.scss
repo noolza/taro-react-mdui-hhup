@@ -1,0 +1,90 @@
+//@import "../../styles/mixin";
+//@import "../../styles/animate.scss/animate";
+//@import "../../styles/mdui.scss";
+//@import "~taro-ui/dist/style/components/icon.scss";
+//@import "~taro-ui/dist/style/variables/default.scss";
+
+//@include keyframes(show) {
+//  0%{
+//    transform: scale(1);
+//    opacity: 1;
+//  }
+//  100% {
+//    transform: scale(1.1);
+//    opacity: 1;
+//  }
+//}
+//
+//@include keyframes(hide) {
+//  0%{
+//    transform: scale(1.1);
+//    opacity: 1;
+//  }
+//  90%{
+//    opacity: 0;
+//    transform: scale(1.1);
+//  }
+//  100% {
+//    transform: scale(1);
+//    opacity: 0;
+//  }
+//}
+
+.ppt {
+  //@include wh(100%, 100%);
+  //position: relative;
+  &_menu{
+    position: absolute;
+    top:0;
+    background: rgba(0,0,0,0);
+    z-index: 200;
+  }
+  &_banner{
+    position: relative;
+    height: 750px;
+    display: flex;
+    width:100%;
+    overflow: hidden;
+    z-index: 0;
+    &_item {
+      position: absolute;
+      top:0;
+      left:0;
+      object-fit: cover;
+      height:100%;
+      width:100%;
+      display: flex;
+      //align-items: flex-start;
+      align-items: center;
+      //&--img{
+      //  width: 100%;
+      //  transform: scale(1);
+      //  opacity: 0;
+      //  &--show{
+      //    z-index: 1;
+      //    animation: show 5s linear;
+      //  }
+      //  &--hide{
+      //    z-index: 2;
+      //    animation: hide 500ms linear;
+      //  }
+      //  &--normal{
+      //    opacity:1;
+      //    height: 100%;
+      //  }
+      //}
+      &-img {
+        transform: scale3d(1,1,1);
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        transition: transform 5s linear, opacity 600ms linear;
+        &.active{
+          opacity:1;
+          transform: scale3d(1.1,1.1,1.1);
+        }
+      }
+    }
+  }
+}
+

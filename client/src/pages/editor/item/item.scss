@@ -1,0 +1,86 @@
+
+//@import "~taro-ui/dist/style/components/index.scss";
+//@import "~taro-ui/dist/style/components/list.scss";
+//@import "~taro-ui/dist/style/components/float-layout.scss";
+//@import "~taro-ui/dist/style/components/icon.scss";
+//@import "~taro-ui/dist/style/components/flex.scss";
+@import "@style/edit_icons.wxss";
+@import "@style/icons.wxss";
+
+.item {
+  position: relative;
+  overflow: hidden;
+  //background: #e9e9e9;
+}
+
+.item__wrap {
+  padding-bottom: 100px;
+  //background: #fafafa;
+}
+.item__menu{
+  width:100%;
+  margin-top: -100px;
+  margin-bottom:20px;
+  height:80px;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  display: flex;
+  transform: rotate(0);
+}
+.item__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 200;
+}
+
+button {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  border: none;
+  background: transparent;
+  //background-color: white;
+  border-radius: 0px;
+  line-height: 23px;
+}
+
+button::after{
+  border: none;
+  border-radius: 0px;
+  background: transparent;
+  background-color: transparent;
+}
+
+.fab-btn,
+.item-back {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  color:#000;
+  font-size: 38px;
+  font-weight: bold;
+  text{
+    color: $text-color;
+    font-size: 38px;
+  }
+}
+.item-back{
+  left:10px;
+}
+.fab-btn{
+  right: 40px;
+  bottom: 300px;
+  border-radius: 50%;
+  box-shadow:$fab-box-shadow;
+}
+
